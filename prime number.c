@@ -18,7 +18,7 @@ int main()
         {
             printf("%d\t", n);
             count++;
-            if (count%10==0)
+            if (count % 10 == 0)
             {
                 printf("\n");
             }
