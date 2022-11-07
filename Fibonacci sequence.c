@@ -7,7 +7,7 @@ int f(int n)
     for (a = b = i = 1; i <= n; i++)
     {
         c = b;
-        b = a + b;
+        b += a;
         a = c;
     }
     return a;
