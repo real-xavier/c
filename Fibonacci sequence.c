@@ -14,16 +14,13 @@ int f(int n)
 }
 int main()
 {
-    int n, x, j;
-    float numerator, denominator, fraction, sum;
+    int n, x;
+    float fraction, sum;
     printf("");
     scanf("%d", &x);
-    for (j = n = 1; j <= x; j++)
+    for (n = 1; n <= x; n++)
     {
-        denominator = (float)f(n);
-        n++;
-        numerator = (float)f(n);
-        fraction = numerator / denominator;
+        fraction = (float)f(n + 1) / (float)f(n);
         sum += fraction;
     }
     printf("%f", sum);
