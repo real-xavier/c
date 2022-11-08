@@ -4,7 +4,7 @@
 int main()
 {
     int factor, n, x, count = 0;
-    for (n = 2; n <= 250000; n++)
+    for (n = 2; n <= 25000; n++)
     {
         for (x = 2, factor = 0; x <= n / 2; x++)
         {
