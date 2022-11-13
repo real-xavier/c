@@ -1,34 +1,33 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-int f(int n)
+float fibonacci(int x)
 {
     int a, b, c, i;
-    for (a = b = i = 1; i <= n; i++)
+    for (a = b = i = 1; i <= x; i++)
     {
         c = b;
         b += a;
         a = c;
     }
-    return a;
+    return (float)a;
 }
-int main()
+void t()
 {
-    int n, x;
-    float fraction, sum;
-    printf("");
-    scanf("%d", &x);
-    for (n = 1; n <= x; n++)
-    {
-        fraction = (float)f(n + 1) / (float)f(n);
-        sum += fraction;
-    }
-    printf("%f", sum);
-    printf("\n");
     time_t now;
     time(&now);
     printf("%s\n", __TIMESTAMP__);
     printf("%s", ctime(&now));
+}
+int main()
+{
+    int x, n;
+    float sum;
+    scanf("%d", &n);
+    for (x = 0; x < n; x++)
+        sum += fibonacci(x + 2) / fibonacci(x + 1);
+    printf("%f\n", sum);
+    t();
     system("pause");
     return 0;
 }
