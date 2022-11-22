@@ -1,15 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
+#define N 13
 int main()
 {
-    int r, c;
-    int a[10][10];
-    a[0][0] = 1;
-    for (r = 1; r < 10; r++)
+    int r, c, a[N][N]={};
+    for (r = a[0][0] = 1; r < N; r++)
     {
-        a[r][0] = a[r][r] = 1;
-        printf("%-4d", a[r][0]);
-        for (c = 1; c < r; c++)
+        for (c = 1; c <= r; c++)
         {
             a[r][c] = a[r - 1][c - 1] + a[r - 1][c];
             printf("%-4d", a[r][c]);
