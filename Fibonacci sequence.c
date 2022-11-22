@@ -3,14 +3,14 @@
 #include <stdio.h>
 float fibonacci(int x)
 {
-    int a, b, c, i;
-    for (a = b = i = 1; i <= x; i++)
+    int i[4];
+    for (i[0] = i[1] = i[2] = 1; i[0] <= x; i[0]++)
     {
-        c = b;
-        b += a;
-        a = c;
+        i[3] = i[2];
+        i[2] += i[1];
+        i[1] = i[3];
     }
-    return (float)a;
+    return (float)i[1];
 }
 void t()
 {
